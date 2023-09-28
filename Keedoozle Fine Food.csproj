@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<RootNamespace>Keedoozle_Fine_Food</RootNamespace>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="images\ffs.icon.png" />
+		<None Remove="images\finefoods.icon.png" />
+		<None Remove="images\items\Burger.png" />
+		<None Remove="images\items\Cigarettes.png" />
+		<None Remove="images\items\Coffee.png" />
+		<None Remove="images\items\Cold Drink.png" />
+		<None Remove="images\items\Drink.png" />
+		<None Remove="images\items\Food.png" />
+		<None Remove="images\items\Fruit.png" />
+		<None Remove="images\items\Ice Cream.png" />
+		<None Remove="images\items\Soft Drink.png" />
+		<None Remove="images\items\Tea.png" />
+		<None Remove="images\items\Vegetable.png" />
+		<None Remove="images\keedoozle.png" />
+		<None Remove="images\kffs-icon.jpg" />
+		<None Remove="images\save-48.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="images\ffs.icon.png" />
+		<Resource Include="images\finefoods.icon.png" />
+		<Resource Include="images\items\Burger.png" />
+		<Resource Include="images\items\Cigarettes.png" />
+		<Resource Include="images\items\Coffee.png" />
+		<Resource Include="images\items\Cold Drink.png" />
+		<Resource Include="images\items\Drink.png" />
+		<Resource Include="images\items\Food.png" />
+		<Resource Include="images\items\Fruit.png" />
+		<Resource Include="images\items\Ice Cream.png" />
+		<Resource Include="images\items\Soft Drink.png" />
+		<Resource Include="images\items\Tea.png" />
+		<Resource Include="images\items\Vegetable.png" />
+		<Resource Include="images\keedoozle.png" />
+		<Resource Include="images\kffs-icon.jpg" />
+		<Resource Include="images\save-48.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="UserControls\" />
+		<Folder Include="SqlProcedure\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="Keedoozle_Fine_Food.Views.QuantityBoxWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Keedoozle_Fine_Food.Views"
+                xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Enter Item Quantity" Height="200" Width="350">
+    <StackPanel Margin="10">
+        <TextBlock>Enter Item Quantity (Available Quantity: <Run Text="{Binding AvailableQuantity,Mode=OneWay}"></Run>)</TextBlock>
+        <TextBlock Margin="0 5" FontSize="10" Text="Press Enter to Continue"></TextBlock>
+        <TextBox Text="{Binding Path=Quantity,UpdateSourceTrigger=PropertyChanged}"  Height="30" ForceCursor="True">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TextChanged">
+                    <i:InvokeCommandAction Command="{Binding CheckQuantityCommmand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBox>
+        <TextBlock Foreground="Red" FontSize="10" Text="{Binding Error}" HorizontalAlignment="Left" Width="322" ></TextBlock>
+        <WrapPanel HorizontalAlignment="Right" Margin="0 10">
+            <Button Content="Ok" Background="#FFE8443B" Foreground="White" Width="50" Height="30" IsEnabled="{Binding IsEnabled}" Command="{Binding AddToListCommand}"></Button>
+            <Button Content="Cancel" Margin="10 0 0 0" Background="#FFE8443B" Foreground="White" Width="70" Height="30" Command="{Binding CloseOrderQunatityDialog}" ></Button>
+        </WrapPanel>
+    </StackPanel>
+</Window>
